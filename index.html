@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gregorian to Hebrew Date Converter</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caprasimo&display=swap" rel="stylesheet">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500&display=swap" rel="stylesheet">
+
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Quicksand', sans-serif;
+
+        }
+
+        body {
+            background-image: url('canvasfordesktop.png');
+            background-position: top;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+
+        #gregorianDate {
+            width: 150px;
+            height: 35px;
+            border-radius: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0px 20px;
+            font-size: 20px;
+        }
+
+        h1 {
+            color: #393939;
+            font-family: 'Caprasimo', serif;
+        }
+
+        label {
+            margin-right: 10px;
+        }
+
+        #gregorianDate {
+            margin-right: 10px;
+        }
+
+        button {
+            cursor: pointer;
+        }
+
+        #hebrewDateResult {
+            margin-top: 20px;
+            font-size: 30px;
+            height: 100px;
+            text-align: center;
+
+
+        }
+
+        .titlee {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 150px;
+            padding: 0 50px;
+        }
+
+        .leftsectn {
+            width: 500px;
+        }
+
+        .rightsec {
+            width: 400px;
+        }
+
+        .titlebutn {
+            width: 150px;
+            height: 35px;
+            border-radius: 50px;
+            border: 1.5px solid white;
+            margin-top: 40px;
+            background-color: #1f1e1e;
+            color: white;
+            box-shadow: 5px 4px 8px rgba(0, 0, 0, 0.5);
+            font-weight: bold;
+
+
+        }
+
+        img {
+            width: 50px;
+        }
+
+        .miannnn {
+            height: 200px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            font-family: 'Caprasimo', serif;
+            color: #393939;
+
+
+
+        }
+
+        .leftsideoficn {
+            display: flex;
+        }
+
+        .iconcalc {
+            width: 50px;
+            height: 60px;
+
+        }
+
+        .logotitle {
+            width: 100px;
+            height: 60px;
+            text-align: left;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        ul {
+            display: flex;
+            font-weight: bolder;
+            font-family: 'Caprasimo', serif;
+
+        }
+
+        li {
+            list-style-type: none;
+            padding: 0px 15px;
+        }
+
+
+        .calculatorr {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 400px;
+
+        }
+
+
+        .inputvariables {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .inputclasss {
+            display: flex;
+            width: 500px;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+
+
+        .mobilemenu {
+            display: none;
+        }
+
+        .hamberger {
+            font-size: 18px;
+            font-weight: bolder;
+        }
+
+        #para1 {
+            margin-top: 20px;
+            width: 350px;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        #giffsss {
+            display: flex;
+            justify-content: space-between;
+
+        }
+
+        .toopwalijhandi {
+            position: absolute;
+        }
+
+        #giff11 {
+            width: 270px;
+        }
+
+        #giff22 {
+            width: 270px;
+
+        }
+
+        .toopwalijhandimobile {
+            position: absolute;
+            display: none;
+        }
+
+        #giffsss {
+            position: relative;
+        }
+
+        .posit333 {
+            position: absolute;
+            top: 100px;
+        }
+
+        #giffsssdd {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .imagedimobi {
+            display: none;
+        }
+
+        .shophere {
+            margin-top: 200px;
+        }
+
+        .shopheading {
+            display: flex;
+            justify-content: center;
+        }
+
+        .space {
+            margin-top: 50px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+
+        }
+
+        .one {
+            width: 250px;
+            height: 250px;
+            display: flex;
+            justify-content: center;
+            border: 2px solid grey;
+            border-radius: 20px;
+            margin-top: 30px;
+
+        }
+       .footerimg{
+       
+       }
+        
+
+
+
+
+        @media screen and (width < 750px) {
+            body {
+                background-image: url('canvasmobile.png');
+            }
+
+            .toopwalijhandi {
+                display: none;
+            }
+
+            .toopwalijhandimobile {
+                display: flex;
+            }
+
+
+            .desktopnav {
+                display: none;
+            }
+
+            .mobilemenu {
+                display: flex;
+            }
+
+
+
+            .titlebutn {
+                width: 100px;
+            }
+
+            .inputclasss {
+                display: flex;
+                width: 300px;
+                align-items: start;
+                flex-direction: column;
+
+
+            }
+
+
+            .titlee {
+                flex-direction: column;
+                margin-top: 50px;
+            }
+
+            .leftsectn {
+                width: 300px;
+            }
+
+            .rightsec {
+                display: none;
+            }
+
+            #para1 {
+                width: 300px;
+            }
+
+            #giff11 {
+                width: 170px;
+            }
+
+            #giff22 {
+                width: 170px;
+
+            }
+
+            .posit333 {
+
+                top: 10px;
+            }
+
+            .imagedimobi {
+                display: none;
+                margin-top: 50px;
+            }
+
+            .calculatorr {
+
+                margin-top: 450px;
+
+            }
+
+            .one {
+                width: 170px;
+                height: 170px;
+
+            }
+
+
+
+        }
+
+        @media screen and (width < 400px) {
+            .calculatorr {
+
+                margin-top: 350px;
+
+            }
+
+        }
+
+        @media screen and (500px < width < 550px) {
+
+            body {
+                background-image: url('canvasmobilefor550.png');
+            }
+
+        }
+
+        @media screen and (450px < width < 500px) {
+
+            body {
+                background-image: url('canvasmobileforlessthan500.png');
+            }
+
+        }
+
+        @media screen and (410px < width < 450px) {
+
+            body {
+                background-image: url('canvasmobile410.png');
+            }
+
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="toopwalijhandi">
+        <img src="topwalijhanditwo.png" alt="fghj">
+    </div>
+    <div class="toopwalijhandimobile">
+        <img src="pngwing.com.png" alt="fghj">
+    </div>
+
+    <div class="miannnn">
+        <div class="leftsideoficn">
+            <div class="iconcalc">
+                <img src="calculator.png" alt="fds">
+            </div>
+            <div class="logotitle">
+                Hebrew <br> Birthday <br> Calculator
+            </div>
+        </div>
+
+        <div class="desktopnav">
+            <nav>
+                <ul>
+                    <li>Home</li>
+                    <li>Calculator</li>
+                    <li>Quotes</li>
+                    <li>Shop</li>
+                    <li>Contact us</li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="mobilemenu">
+            <div class="hamberger">
+                &#9776;
+            </div>
+        </div>
+
+
+    </div>
+    <div class="titlee">
+        <div class="leftsectn">
+            <h1>Hebrew Birthday</h1>
+            <h1>Calculator</h1>
+            <br>
+            <p id="para1">Lorem ipsum dolor sit, amet consectetur adicing elit. Repudiandae porro ab
+                voluptatum deleniti ut!
+                Nemo
+                exercitationem numquam maiores consequatur vero, aut unde, perferendis placeat labore animi esse
+                obcaecati
+                et fuga?</p>
+
+            <div>
+                <button class="titlebutn">Shop</button>
+                <button class="titlebutn">Quotes</button>
+            </div>
+        </div>
+        <div class="rightsec">
+
+        </div>
+    </div>
+
+    <div class="imagedimobi">
+
+        <img src="canvasformobile.png" alt="">
+
+
+    </div>
+
+
+    <div class="calculatorr">
+        <div class="inputvariables">
+            <div class="inputclasss">
+                <label for="gregorianDate">Enter Gregorian Date:</label>
+                <input type="date" id="gregorianDate">
+                <label for="sunsetOption">After Sunset: <input type="radio" id="sunsetOption" name="conversionOption"
+                        value="afterSunset"></label>
+            </div>
+            <div>
+                <button class="titlebutn" onclick="convertDate()">Convert</button>
+            </div>
+        </div>
+        <div class="resultbox">
+            <p id="hebrewDateResult">
+            </p>
+        </div>
+    </div>
+
+    <div class="shophere">
+        <div class="shopheading">
+            <h1>Shop Here</h1>
+        </div>
+        <div class="space">
+            <div class="one">one</div>
+            <div class="one">one</div>
+            <div class="one">one</div>
+            <div class="one">one</div>
+            <div class="one">one</div>
+            <div class="one">one</div>
+            <div class="one">one</div>
+            <div class="one">one</div>
+            <div class="one">one</div>
+            <div class="one">one</div>
+            <div class="one">one</div>
+        </div>
+
+    </div>
+
+    <div>
+        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, nisi accusamus cumque alias eos
+            nemo adipisci est nam neque laboriosam quidem rerum. Vero facere illo, officiis laboriosam ratione
+            aspernatur!</div>
+    </div>
+
+
+
+    <footer>
+        <div class="footerimg">
+            <img src="canvasfooter.png" alt="ghjkhghj">
+        </div>
+    </footer>
+
+
+
+
+
+
+
+    <script>
+        function convertDate() {
+            // Get the input date value
+            const gregorianDateInput = document.getElementById("gregorianDate");
+            const gregorianDateValue = gregorianDateInput.value;
+
+            // Check if the user wants to convert after sunset
+            const convertAfterSunset = document.getElementById("sunsetOption").checked;
+
+            // Convert Gregorian date to Hebrew date
+            const { hebrewDate, dayOfWeek } = convertGregorianToHebrew(gregorianDateValue, convertAfterSunset);
+
+            // Display the result
+            const resultElement = document.getElementById("hebrewDateResult");
+            resultElement.innerHTML = `
+
+            <div id="giffsss">
+
+                <div class="posit333">
+                    <strong>Your Hebrew Birthday is </strong> ${hebrewDate}, <strong>Day:</strong> ${dayOfWeek} 
+                </div>
+                <div id="giffsssdd">
+                    <img id="giff11" src="output-onlinegiftools.gif" alt="hhh"> 
+                    <img id="giff22" 
+                    src="confetti-45.gif" 
+                    alt="hhh"> 
+                    
+                </div>
+             
+           </div>`;
+
+        }
+
+        function convertGregorianToHebrew(gregorianDate, convertAfterSunset) {
+            // Use Intl.DateTimeFormat to format the date in the Hebrew calendar
+            const hebrewDateFormatter = new Intl.DateTimeFormat('en', {
+                year: 'numeric',
+                month: 'long', // Use 'long' for full month names
+                day: 'numeric',
+                calendar: 'hebrew'
+            });
+
+            // Parse the input Gregorian date
+            const gregorianDateObject = new Date(gregorianDate);
+
+            // Convert after sunset if the option is selected
+            if (convertAfterSunset) {
+                // For simplicity, let's assume sunset is at 6:00 PM
+                const sunsetHour = 18;
+                if (gregorianDateObject.getHours() < sunsetHour) {
+                    // Convert to the next day after sunset
+                    gregorianDateObject.setDate(gregorianDateObject.getDate() + 1);
+                }
+            }
+
+            // Format the date using the Hebrew calendar
+            const hebrewDate = hebrewDateFormatter.format(gregorianDateObject);
+
+            // Get the day of the week
+            const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+            const dayOfWeek = daysOfWeek[gregorianDateObject.getDay()];
+
+            return { hebrewDate, dayOfWeek };
+        }
+    </script>
+
+</body>
+
+</html>
